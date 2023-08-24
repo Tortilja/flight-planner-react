@@ -22,10 +22,10 @@ public class AirportController {
 
     @GetMapping("/airportList")
     public ResponseEntity<List<Airport>> getAllAirport() {
-        List<Airport> authors = airportService.getAllAirport();
-        return ResponseEntity.ok(authors);
+        List<Airport> airport = airportService.getAllAirport();
+        return ResponseEntity.ok(airport);
     }
-    @GetMapping("/admin/airport/{id}")
+    @GetMapping("/airport/{id}")
     public ResponseEntity<Airport> getAirportById(@PathVariable Long id){
         Airport airport = airportService.getAirportById(id);
         if(airport == null){
