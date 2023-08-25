@@ -69,4 +69,8 @@ public class AirportController {
         List<Airport> foundAirports = airportService.searchAirports(searchTerm);
         return ResponseEntity.ok(foundAirports);
     }
+    @GetMapping("/admin")
+    public ResponseEntity login(){
+        return ResponseEntity.ok("Logged successful");
+    }
 }
